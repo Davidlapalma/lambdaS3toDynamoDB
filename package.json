@@ -1,0 +1,22 @@
+{
+  "name": "lambdas3todynamodb",
+  "version": "1.0.0",
+  "description": "Lambda que detecta eventos de S3 y registra en DynamoDB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Davidlapalma/lambdaS3toDynamoDB.git"
+  },
+  "author": "Ruben Vazquez y David Gonzalez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Davidlapalma/lambdaS3toDynamoDB/issues"
+  },
+  "homepage": "https://github.com/Davidlapalma/lambdaS3toDynamoDB#readme",
+  "dependencies": {
+    "aws-sdk": "^2.229.1"
+  }
+}
