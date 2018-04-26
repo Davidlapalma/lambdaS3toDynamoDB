@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Davidlapalma/lambdaS3toDynamoDB#readme",
   "dependencies": {
-    "aws-sdk": "^2.229.1"
+    "aws-sdk": "^2.229.1",
+    "fs": "0.0.1-security"
   }
 }

@@ -1,6 +1,10 @@
 var fs = require('fs');
-var obj = JSON.parse(fs.readFileSync('usertxt_responseS3.json', 'utf8'));
-var contentFile = new Buffer(obj.Body.data).toString('utf8');
+var obj = fs.readFileSync('usertxt_responseS3.json', 'utf8');
+var buf = Buffer.from(obj.Body.data);
+var contentFile= buf.toString('utf8');
+console.log(buf);
+var contentFile = buf.toString('utf8');
+console.log(contentFile);
 if (contentFile.includes('Datos Personales')) {
     console.log('Archivo de datos personales encontrado')
     var obj = {};
@@ -17,5 +21,4 @@ if (contentFile.includes('Datos Personales')) {
 }
 else {
     console.log('no esta')
-    console.error(error);
 }
