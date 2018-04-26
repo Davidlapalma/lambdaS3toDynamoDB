@@ -14,8 +14,8 @@ if (contentFile.includes('Datos Personales')) {
             obj[line[0].trim()] = line[1].trim();
       })
     console.log(JSON.stringify(obj));
+    console.log(obj.Dni);
 }
 else {
     console.log('no esta')
-    console.error(error);
 }
