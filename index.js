@@ -23,8 +23,12 @@ exports.handler = function(event, context, exit){
      var params2 = {
 TableName: "Usuarios",
 Item: {
-    "Id_Fichero":"x",
-    "dni":"453"
+    "Id_Fichero":ID(6),
+    "Dni":,
+    "Email":,
+    "Fecha":Date.now(),
+    "Texto":,
+    Usuario:,
 }
 
 };
@@ -35,3 +39,17 @@ documentClient.put(params2, function(err, data) {
 });
      return 'hola';
 };
+
+function ID(length){
+  var chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz'.split('');
+
+  if (! length) {
+      length = Math.floor(Math.random() * chars.length);
+  }
+
+  var str = '';
+  for (var i = 0; i < length; i++) {
+      str += chars[Math.floor(Math.random() * chars.length)];
+  }
+  return str;
+}
