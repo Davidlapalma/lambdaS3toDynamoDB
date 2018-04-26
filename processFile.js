@@ -11,10 +11,11 @@ if (contentFile.includes('Datos Personales')) {
       splitted.forEach((line) =>{
             if (line.match('Datos Personales')){return;}
             var line = line.split(":");
-            obj[line[0]] = line[1];
+            obj[line[0].trim()] = line[1].trim();
       })
     console.log(JSON.stringify(obj));
 }
 else {
     console.log('no esta')
+    console.error(error);
 }
