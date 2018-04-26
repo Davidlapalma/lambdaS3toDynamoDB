@@ -20,5 +20,5 @@ exports.handler = function(event, context, exit){
           console.log((new Buffer(120)).toString('hex'))
          }
      }); 
-     return 'hola';
+     return 'Anything';
 };

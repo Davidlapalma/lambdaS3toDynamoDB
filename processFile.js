@@ -8,13 +8,12 @@ if (contentFile.includes('Datos Personales')) {
     var splitted = contentFile.split("\n").filter(element => {
         return (element !== (undefined || null || ''));
       });
-      splitted.forEach((line, index) =>{
+      splitted.forEach((line) =>{
             if (line.match('Datos Personales')){return;}
             var line = line.split(":");
             obj[line[0]] = line[1];
       })
-
-    console.log(obj)
+    console.log(JSON.stringify(obj));
 }
 else {
     console.log('no esta')
